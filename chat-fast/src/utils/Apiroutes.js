@@ -1,4 +1,4 @@
-export const server="https://chat-fast.vercel.app/";
+export const server="https://chat-fast.vercel.app";
 
 export const registerRoute = `${server}/api/auth/register`;
 export const loginRoute = `${server}/api/auth/login`;
