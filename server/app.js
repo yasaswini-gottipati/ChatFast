@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGODB_URL,{useNewUrlParser:true, useUnifiedTopolo
 const app=express();
 const port=process.env.PORT;
 app.use(cors({
-    origin:["https://deploy-mern-1whq.vercel.app"],
+    origin:["https://chat-fast-frontend.vercel.app"],
     methods:["POST","GET"],
     credentials: true
 }));
