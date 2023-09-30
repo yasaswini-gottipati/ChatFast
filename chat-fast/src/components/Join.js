@@ -95,7 +95,13 @@ const Join = () => {
         username,
         email,
         password,
-      });
+      },headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json',
+            'Authorization': key,
+            withCredentials: true,
+            mode: 'no-cors',
+          });
       if(data.status ===false){
         toast.error(data.msg);
       }
