@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGODB_URL,{useNewUrlParser:true, useUnifiedTopolo
 const app=express();
 const port=process.env.PORT;
 app.use(cors({
-    origin:"https://chat-fast-frontend.vercel.app",
+    origin:["http://localhost:3000","https://chat-front-app.onrender.com"],
     methods:["POST","GET"],
     credentials: true
 }));
@@ -33,7 +33,7 @@ app.get("/",(req,res)=>{
 const server=http.createServer(app);
 const io=socketIO(server,{
     cors:{
-        origin:"https://chat-fast-frontend.vercel.app",
+        origin:["http://localhost:3000","https://chat-front-app.onrender.com"],
         credentials:true,
     },
 });
