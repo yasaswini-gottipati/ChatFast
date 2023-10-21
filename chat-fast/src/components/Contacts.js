@@ -62,6 +62,7 @@ display:grid;
 grid-template-rows:10% 75% 15%;
 overflow:hidden;
 background-color:#080420;
+
 .logo{
   display:flex;
   align-items:center;
@@ -78,9 +79,7 @@ background-color:#080420;
       height:6rem;
     }
   }
-  @media screen and (min-width:720px) and (max-width:1080px){
-
-  }
+  
 }
 .contacts{
   display:flex;
@@ -88,14 +87,15 @@ background-color:#080420;
   justify-content:center;
   flex-direction:column;
   overflow:auto;
+  padding-top:30%;
+  height:100%;
   gap:0.9rem;
   &::-webkit-scrollbar{
-   width:2rem;
-   &-thumb{
-    background-color:#ffffff;
-    width:0.1rem;
-    border-radius:1rem;
-   }
+   display:none;
+  }
+  @media screen and (min-width:720px) and (max-width:1080px){
+   width:29vw;
+   overflow-x:hidden;
   }
   .contact{
     background-color:#ffffff;
@@ -175,5 +175,4 @@ background-color:#080420;
   }
 }
 `;
-
 export default Contacts
